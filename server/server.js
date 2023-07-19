@@ -16,11 +16,18 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: authMiddleware,
+  cors: cors()
 });
 
 const app = express();
+app.use(cors({
+  origin: 'https://book-se-f431acbe8563.herokuapp.com'
+}));
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.resolve(__dirname, "./public")));
+app.use(express.static(path.resolve(__dirname, "../client/build")));
+
 app.use(express.json());
 
 // Apollo server init
