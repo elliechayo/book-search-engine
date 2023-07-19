@@ -1,5 +1,6 @@
 // environmental variables
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
+const MONGO_URI = process.env.MONGO_URI;
 
 // packages
 const express = require("express");
@@ -8,6 +9,7 @@ const path = require("path");
 const db = require("./config/connection");
 const { authMiddleware } = require("./utils/auth");
 const { typeDefs, resolvers } = require("./schemas");
+connectDB(MONGO_URI);
 
 const server = new ApolloServer({
   typeDefs,
