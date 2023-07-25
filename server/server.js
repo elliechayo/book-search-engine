@@ -9,8 +9,7 @@ const path = require("path");
 const db = require("./config/connection");
 const { authMiddleware } = require("./utils/auth");
 const { typeDefs, resolvers } = require("./schemas");
-const connectDB = require("./config/connection");
-connectDB(MONGO_URI);
+
 
 const server = new ApolloServer({
   typeDefs,
