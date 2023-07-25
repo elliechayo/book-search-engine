@@ -8,7 +8,7 @@ Book Search Engine application built with the MERN stack (MongoDB, Express.js, R
 ## Table of Contents
 
 * [Description](#Description)
-* [Links](#Links)
+* [Links](#links)
 * [License](#license)
 
 ## Description 
@@ -46,7 +46,7 @@ Book Search Engine application built with the MERN stack (MongoDB, Express.js, R
 <hr>
 
 
-**Links**
+## Links
 
 [URL of the deployed application](https://book-se-f431acbe8563.herokuapp.com/)
 
